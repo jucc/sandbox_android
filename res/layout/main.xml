@@ -1,23 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
 
-    <EditText android:id="@+id/edit_message"
-              android:layout_width="0dp"
-              android:layout_weight="1"
-              android:layout_height="wrap_content"
-              android:hint="@string/edit_message"
-    />
-    <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/button_send"
-            android:onClick="sendMessage"
-    />
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:orientation="horizontal"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:padding="5dp">
+        <EditText android:id="@+id/edit_message"
+                  android:layout_width="0dp"
+                  android:layout_weight="1"
+                  android:layout_height="wrap_content"
+                  android:hint="@string/edit_message"
+        />
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_send"
+                android:onClick="sendMessage"
+        />
+    </LinearLayout>
 
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:orientation="horizontal"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center" android:padding="5dp" android:showDividers="beginning|middle|end"
+                  android:baselineAligned="false">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Count how many times have you changed the screen's orientation"
+                android:layout_gravity="center"
+        />
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_count"
+                android:onClick="countNumber"
+                android:layout_gravity="center"
+        />
+        <TextView
+                android:id="@+id/count_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_gravity="center"
+                />
+    </LinearLayout>
 </LinearLayout>
+
 
